@@ -35,3 +35,21 @@ jobs:
       
     - name: Package Application
       run: dotnet publish -c Release -o publish
+      
+    - name: Copy application to Lightsail instance
+      uses: appleboy/scp-action@v3
+      with:
+        host: 3.76.99.135
+        username: nurmamatovnodirbek43@gmail.com
+        password: Qahhor2002@
+        source: publish
+        target: /home/<username>/app
+    - name: Start application on Lightsail instance
+      uses: appleboy/ssh-action@v3
+      with:
+        host: 3.76.99.135
+        username: nurmamatovnodirbek43@gmail.com
+        password: Qahhor2002@
+        script: |
+          cd /home/<username>/app
+          dotnet Caravan.Web.dll
