@@ -37,7 +37,7 @@ jobs:
       run: dotnet publish -c Release -o publish
       
     - name: Copy application to Lightsail instance
-      uses: appleboy/scp-action@v3
+      uses: appleboy/scp-action@v1
       with:
         host: 3.76.99.135
         username: nurmamatovnodirbek43@gmail.com
@@ -45,7 +45,7 @@ jobs:
         source: publish
         target: /home/<username>/app
     - name: Start application on Lightsail instance
-      uses: appleboy/ssh-action@v3
+      uses: appleboy/ssh-action@v1
       with:
         host: 3.76.99.135
         username: nurmamatovnodirbek43@gmail.com
