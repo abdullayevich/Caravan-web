@@ -52,4 +52,4 @@ jobs:
  
     - name: Deploy to Lightsail
       run: |
-        scp -i ~/.ssh/authorized_keys.pem -r dist/* ubuntu@3.76.99.135:/var/www/Caravan-Web
+        scp -i C:\LightsailDefaultKey-eu-central-1.pem -r dist/* ubuntu@3.76.99.135:/var/www/Caravan-Web
