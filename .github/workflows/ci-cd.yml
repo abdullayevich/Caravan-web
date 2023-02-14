@@ -52,4 +52,4 @@ jobs:
  
     - name: Deploy to Lightsail
       run: |
-        scp -i ~/.ssh/my-lightsail-key.pem -r dist/* ubuntu@$3.76.99.135:/var/www/Caravan-Web
+        scp -i ~/.ssh/my-lightsail-key.pem -r dist/* ubuntu@3.76.99.135:/var/www/Caravan-Web
